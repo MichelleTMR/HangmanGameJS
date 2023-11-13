@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link href="hangmangame.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <div class="titlestyle">
+        <h1>Hangman Game</h1>
+        <p>Use the alphabet to guess the word, or click hint to get a clue.</p>
+        </div>
+
+        <div id="buttonslocationstyle">
+            <button class="buttonstyle" onclick="letterSelected('a')">a</button>
+            <button class="buttonstyle" onclick="letterSelected('b')">b</button>
+            <button class="buttonstyle" onclick="letterSelected('c')">c</button>
+            <button class="buttonstyle" onclick="letterSelected('d')">d</button>
+            <button class="buttonstyle" onclick="letterSelected('e')">e</button>
+            <button class="buttonstyle" onclick="letterSelected('f')">f</button>
+            <button class="buttonstyle" onclick="letterSelected('g')">g</button>
+            <button class="buttonstyle" onclick="letterSelected('h')">h</button>
+            <button class="buttonstyle" onclick="letterSelected('i')">i</button>
+            <button class="buttonstyle" onclick="letterSelected('j')">j</button>
+            <button class="buttonstyle" onclick="letterSelected('k')">k</button>
+            <button class="buttonstyle" onclick="letterSelected('l')">l</button>
+            <button class="buttonstyle" onclick="letterSelected('m')">m</button>
+            <button class="buttonstyle" onclick="letterSelected('n')">n</button>
+            <button class="buttonstyle" onclick="letterSelected('o')">o</button>
+            <button class="buttonstyle" onclick="letterSelected('p')">p</button>
+            <button class="buttonstyle" onclick="letterSelected('q')">q</button>
+            <button class="buttonstyle" onclick="letterSelected('r')">r</button>
+            <button class="buttonstyle" onclick="letterSelected('s')">s</button>
+            <button class="buttonstyle" onclick="letterSelected('t')">t</button>
+            <button class="buttonstyle" onclick="letterSelected('u')">u</button>
+            <button class="buttonstyle" onclick="letterSelected('v')">v</button>
+            <button class="buttonstyle" onclick="letterSelected('w')">w</button>
+            <button class="buttonstyle" onclick="letterSelected('x')">x</button>
+            <button class="buttonstyle" onclick="letterSelected('y')">y</button>
+            <button class="buttonstyle" onclick="letterSelected('z')">z</button>
+        </div>
+        <div class="livehintstyle">
+            <h2>Guess a fruit</h2>
+             <!-- word display-->
+                <h2>Lives left:</h2>
+                <h2 id="lives"></h2>
+                <p id="displayword"></p>
+                <p id="displayhint"></p>
+                <button id="hintbuttonstyle" onclick="hintButton()" id="hintbutton">Hint</button>
+        
+        <div class="game-container"> <!--hangman drawing in html -->
+            <svg height="250" width="200" class="figure-container">
+            <!-- hanger -->
+                <line class="invisible" id="horizontal" x1="60" y1="20"  y2="20"  x2="140"/>
+                <line class="invisible" id="rope" x1="140" y1="20" x2="140" y2="50"/>
+                <line class="invisible" id="pole" x1="60" y1="20" x2="60" y2="230"/>
+                <line id="bottomline" x1="20" y1="230" x2="100" y2="230"/>
+            <!-- head -->
+                <circle class="invisible" id="head" cx="140" cy="70" r="20" class="figure-part"/>
+                <!-- body -->
+                <line class="invisible" id="body" x1="140" y1="90" x2="140" y2="150" class="figure-part"/>
+            <!-- arms -->
+                <line class="invisible" id="leftarm" x1="140" y1="120" x2="120" y2="100" class="figure-part"/>
+                <line class="invisible" id="rightarm" x1="140" y1="120" x2="160" y2="100" class="figure-part"/>
+            <!-- legs -->
+                <line class="invisible" id="leftleg" x1="140" y1="150" x2="120" y2="180" class="figure-part"/>
+                <line class="invisible" id="rightleg" x1="140" y1="150" x2="160" y2="180" class="figure-part"/>
+            </svg>
+        </div>
+        </div>
+
+    </div>
+    <script src="hangmangame.js"></script>
+</body>
+</html>
